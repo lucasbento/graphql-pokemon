@@ -40,7 +40,7 @@ async function generateSchema(schema, relativePath) {
 }
 
 (async () => {
-  await generateSchema(GraphQLSchema, '../schemas/graphql');
+  await generateSchema(GraphQLSchema, '../schemas');
 
   process.exit(0);
 })();
