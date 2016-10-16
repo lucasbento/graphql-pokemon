@@ -1,39 +1,14 @@
-import {
-  GraphQLObjectType,
-  GraphQLInt,
-  GraphQLString,
-} from 'graphql';
+import { GraphQLObjectType } from 'graphql';
 
-import PokemonType from './PokemonType';
-import { getPokemonById, getPokemonByName } from '../service/Pokemon';
+import ViewerType from './ViewerType';
 
 export default new GraphQLObjectType({
   name: 'Query',
-  description: 'Query any Pokémon by ID or name',
+  description: 'Query any Pokémon by number or name',
   fields: () => ({
-    pokemon: {
-      type: PokemonType,
-      args: {
-        id: {
-          type: GraphQLInt,
-        },
-        name: {
-          type: GraphQLString,
-        },
-      },
-      resolve: async (obj, { id, name }) => {
-        if (id) {
-          return await getPokemonById(id);
-        }
-
-        if (name) {
-          return await getPokemonByName(name);
-        }
-
-        throw new Error(
-          'You need to specify either the ID or name of the Pokémon'
-        );
-      },
+    viewer: {
+      type: ViewerType,
+      resolve: (...obj) => obj,
     },
   }),
 });
