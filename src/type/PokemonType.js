@@ -6,6 +6,10 @@ import {
   GraphQLList,
 } from 'graphql';
 
+import {
+  globalIdField,
+} from 'graphql-relay';
+
 import PokemonDimensionType from './PokemonDimensionType';
 import PokemonAttackType from './PokemonAttackType';
 import EvolutionRequirementType from './EvolutionRequirementType';
@@ -16,10 +20,11 @@ const PokemonType = new GraphQLObjectType({
   name: 'Pokemon',
   description: 'Represents a Pokémon',
   fields: () => ({
-    id: {
-      type: GraphQLInt,
+    id: globalIdField('Pokemon'),
+    number: {
+      type: GraphQLString,
       description: 'The identifier of this Pokémon',
-      resolve: obj => obj.id,
+      resolve: obj => `00${obj.id}`.slice(-3),
     },
     name: {
       type: GraphQLString,
@@ -84,6 +89,11 @@ const PokemonType = new GraphQLObjectType({
       type: GraphQLInt,
       description: 'The maximum HP of this Pokémon',
       resolve: obj => obj.maxHP,
+    },
+    image: {
+      type: GraphQLString,
+      resolve: obj =>
+        `https://img.pokemondb.net/artwork/${obj.name.toLowerCase().replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '')}.jpg`,
     },
   }),
 });
