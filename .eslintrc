@@ -8,8 +8,5 @@
     "no-continue": 0,
     "no-underscore-dangle": 0,
     "generator-star-spacing": 0,
-  },
-  "env": {
-    "mocha": true
   }
 }
