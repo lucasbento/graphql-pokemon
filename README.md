@@ -3,9 +3,9 @@
 </p>
 
 <h1 align="center">GraphQL Pokémon</h1>
-
 <p align="center">
-  Get information of a Pokémon with GraphQL!
+  Get information of a Pokémon with GraphQL!<br />
+  <a href="https://graphql-pokemon.now.sh/">See the GraphiQL interface</a>
 </p>
 
 ## How to use
@@ -49,9 +49,7 @@ Simply get Pokémon's information through queries in GraphQL, example:
 
 > Try this query [here][graphiql-interface-query]!
 
-### [Click here to use GraphiQL interface][graphiql-interface]
-
-### Check out the [React Relay Pokémon Project][react-relay-pokemon-repo] and [Live Demo][react-relay-pokemon] too!
+> Check out the [React Relay Pokémon Project][react-relay-pokemon-repo] and [Live Demo][react-relay-pokemon] too!
 
 ## Running
 
@@ -59,15 +57,15 @@ Simply get Pokémon's information through queries in GraphQL, example:
 
 ````sh
   yarn
-  npm run build
-  npm start
+  yarn run build
+  yarn start
 ```
 
 ### Development
 
 ````sh
   yarn
-  npm run watch # Using nodemon for auto-reloading
+  yarn run watch # Using nodemon for auto-reloading
 ```
 
 [graphiql-interface]: https://graphql-pokemon.now.sh/
