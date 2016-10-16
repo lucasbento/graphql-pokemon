@@ -2009,7 +2009,7 @@
   },
   {
     "id": "029",
-    "name": "Nidoran ♀",
+    "name": "Nidoran-F",
     "classification": "Poison Pin Pokémon",
     "types": [
       "Poison"
@@ -2112,7 +2112,7 @@
     "Previous evolution(s)": [
       {
         "id": 29,
-        "name": "Nidoran ♀"
+        "name": "Nidoran-F"
       }
     ],
     "evolutionRequirements": {
@@ -2193,7 +2193,7 @@
     "Previous evolution(s)": [
       {
         "id": 29,
-        "name": "Nidoran ♀"
+        "name": "Nidoran-F"
       },
       {
         "id": 30,
@@ -2236,7 +2236,7 @@
   },
   {
     "id": "032",
-    "name": "Nidoran ♂",
+    "name": "Nidoran-M",
     "classification": "Poison Pin Pokémon",
     "types": [
       "Poison"
@@ -2263,7 +2263,7 @@
     "fleeRate": 0.15,
     "evolutionRequirements": {
       "amount": 25,
-      "name": "Nidoran♂ candies"
+      "name": "Nidoran-M candies"
     },
     "evolutions": [
       {
@@ -2339,12 +2339,12 @@
     "Previous evolution(s)": [
       {
         "id": 32,
-        "name": "Nidoran ♂"
+        "name": "Nidoran-M"
       }
     ],
     "evolutionRequirements": {
       "amount": 100,
-      "name": "Nidoran♂ candies"
+      "name": "Nidoran-M candies"
     },
     "evolutions": [
       {
@@ -2420,7 +2420,7 @@
     "Previous evolution(s)": [
       {
         "id": 32,
-        "name": "Nidoran ♂"
+        "name": "Nidoran-M"
       },
       {
         "id": 33,
