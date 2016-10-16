@@ -1,6 +1,6 @@
 {
   "name": "graphql-pokemon",
-  "description": "Query any Pokémon through GraphQL",
+  "description": "Get information of a Pokémon with GraphQL!",
   "version": "1.0.0",
   "author": {
     "name": "Lucas Bento da Silva",
@@ -11,6 +11,7 @@
   "dependencies": {
     "fs-promise": "^0.5.0",
     "graphql": "^0.7.0",
+    "graphql-relay": "^0.4.3",
     "koa": "^2.0.0",
     "koa-convert": "^1.2.0",
     "koa-cors": "0.0.16",
@@ -30,11 +31,11 @@
   "homepage": "https://github.com/lucasbento/graphql-pokemon#readme",
   "keywords": [
     "pokemon",
-    "pokemon",
     "pogoapi",
     "pokeapi",
     "koa",
-    "graphql"
+    "graphql",
+    "relay"
   ],
   "license": "MIT",
   "main": "dist/index.js",
