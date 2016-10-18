@@ -93,7 +93,7 @@ const PokemonType = new GraphQLObjectType({
     image: {
       type: GraphQLString,
       resolve: obj =>
-        `https://img.pokemondb.net/artwork/${obj.name.toLowerCase().replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '')}.jpg`,
+        `https://img.pokemondb.net/artwork/${obj.name.toLowerCase().replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').replace(' ', '-')}.jpg`,
     },
   }),
 });
