@@ -9,7 +9,6 @@
   },
   "bugs": "https://github.com/lucasbento/graphql-pokemon/issues",
   "dependencies": {
-    "fs-promise": "^0.5.0",
     "graphql": "^0.7.0",
     "graphql-relay": "^0.4.3",
     "koa": "^2.0.0",

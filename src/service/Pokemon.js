@@ -1,24 +1,15 @@
-import fsp from 'fs-promise';
-
-const pokemonDataFile = `${__dirname}/../pokemons/pokemons.json`;
-
-const getPokemonsFromJson = async () =>
-  await fsp.readJSON(pokemonDataFile, 'utf8');
+import pokemons from '../pokemons/pokemons.json';
 
 export async function getPokemons(args) {
-  const searchPokemons = await getPokemonsFromJson();
+  const searchedPokemons = pokemons.slice(0, args.first);
 
-  const pokemons = searchPokemons.slice(0, args.first);
+  // const edges = searchedPokemons.map(pokemon => ({ node: pokemon }));
 
-  // const edges = pokemons.map(pokemon => ({ node: pokemon }));
-
-  return pokemons || null;
+  return searchedPokemons || null;
 }
 
 export async function getPokemonById(pokemonId) {
-  const searchPokemons = await getPokemonsFromJson();
-
-  const pokemon = searchPokemons.filter(({ id }) =>
+  const pokemon = pokemons.filter(({ id }) =>
     parseInt(id, 10) === parseInt(pokemonId, 10)
   );
 
@@ -26,11 +17,9 @@ export async function getPokemonById(pokemonId) {
 }
 
 export async function getPokemonByName(pokemonNameSearch) {
-  const searchPokemons = await getPokemonsFromJson();
-
   const pokemonName = pokemonNameSearch.toLowerCase().trim();
 
-  const pokemon = searchPokemons.filter(({ name }) =>
+  const pokemon = pokemons.filter(({ name }) =>
     name.toLowerCase() === pokemonName
   );
 
@@ -46,15 +35,13 @@ export async function getPokemonByEvolutions(evolutions) {
     return null;
   }
 
-  const searchPokemons = await getPokemonsFromJson();
-
   const pokemonNames = evolutions.map(evolution =>
     evolution.name.toLowerCase().trim()
   );
 
-  const pokemons = searchPokemons.filter(({ name }) =>
+  const searchedPokemons = pokemons.filter(({ name }) =>
     pokemonNames.indexOf(name.toLowerCase()) !== -1
   );
 
-  return pokemons || null;
+  return searchedPokemons || null;
 }
