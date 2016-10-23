@@ -14,32 +14,30 @@ Simply get Pokémon's information through queries in GraphQL, example:
 
 ```javascript
 {
-  viewer {
-    pokemon(name: "Pikachu") {
+  pokemon(name: "Pikachu") {
+    id
+    number
+    name
+    attacks {
+      special {
+        name
+        type
+        damage
+      }
+    }
+    evolutions {
       id
       number
       name
+      weight {
+        minimum
+        maximum
+      }
       attacks {
-        special {
+        fast {
           name
           type
           damage
-        }
-      }
-      evolutions {
-        id
-        number
-        name
-        weight {
-          minimum
-          maximum
-        }
-        attacks {
-          fast {
-            name
-            type
-            damage
-          }
         }
       }
     }
@@ -75,5 +73,5 @@ This was built as part of a talk on Relay & GraphQL at [@ReactBrasil][react-bras
 [graphiql-interface]: https://graphql-pokemon.now.sh/
 [react-relay-pokemon]: https://react-relay-pokemon.now.sh/
 [react-relay-pokemon-repo]: https://github.com/lucasbento/react-relay-pokemon
-[graphiql-interface-query]: https://graphql-pokemon.now.sh/?query=%7B%0A%20%20viewer%20%7B%0A%20%20%20%20pokemon(name%3A%20%22Pikachu%22)%20%7B%0A%20%20%20%20%20%20id%0A%20%20%20%20%20%20number%0A%20%20%20%20%20%20name%0A%20%20%20%20%20%20attacks%20%7B%0A%20%20%20%20%20%20%20%20special%20%7B%0A%20%20%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%20%20%20%20type%0A%20%20%20%20%20%20%20%20%20%20damage%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20evolutions%20%7B%0A%20%20%20%20%20%20%20%20id%0A%20%20%20%20%20%20%20%20number%0A%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%20%20weight%20%7B%0A%20%20%20%20%20%20%20%20%20%20minimum%0A%20%20%20%20%20%20%20%20%20%20maximum%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20attacks%20%7B%0A%20%20%20%20%20%20%20%20%20%20fast%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%20%20%20%20%20%20type%0A%20%20%20%20%20%20%20%20%20%20%20%20damage%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D
+[graphiql-interface-query]: https://graphql-pokemon.now.sh/?query=%7B%0A%20%20pokemon(name%3A%20%22Pikachu%22)%20%7B%0A%20%20%20%20id%0A%20%20%20%20number%0A%20%20%20%20name%0A%20%20%20%20attacks%20%7B%0A%20%20%20%20%20%20special%20%7B%0A%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%20%20type%0A%20%20%20%20%20%20%20%20damage%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20evolutions%20%7B%0A%20%20%20%20%20%20id%0A%20%20%20%20%20%20number%0A%20%20%20%20%20%20name%0A%20%20%20%20%20%20weight%20%7B%0A%20%20%20%20%20%20%20%20minimum%0A%20%20%20%20%20%20%20%20maximum%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20attacks%20%7B%0A%20%20%20%20%20%20%20%20fast%20%7B%0A%20%20%20%20%20%20%20%20%20%20name%0A%20%20%20%20%20%20%20%20%20%20type%0A%20%20%20%20%20%20%20%20%20%20damage%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D
 [react-brasil]: https://github.com/react-brasil

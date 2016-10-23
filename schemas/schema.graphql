@@ -86,11 +86,7 @@ type PokemonEvolutionRequirement {
 
 # Query any Pokémon by number or name
 type Query {
-  viewer: Viewer
-}
-
-# Query any Pokémon by number or name
-type Viewer {
+  query: Query
   pokemons(first: Int!): [Pokemon]
   pokemon(id: String, name: String): Pokemon
 }
