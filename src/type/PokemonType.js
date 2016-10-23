@@ -5,7 +5,6 @@ import {
   GraphQLFloat,
   GraphQLList,
 } from 'graphql';
-
 import {
   globalIdField,
 } from 'graphql-relay';

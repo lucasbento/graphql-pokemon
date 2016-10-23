@@ -13,28 +13,17 @@
           "description": "Query any Pokémon by number or name",
           "fields": [
             {
-              "name": "viewer",
+              "name": "query",
               "description": null,
               "args": [],
               "type": {
                 "kind": "OBJECT",
-                "name": "Viewer",
+                "name": "Query",
                 "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
-            }
-          ],
-          "inputFields": null,
-          "interfaces": [],
-          "enumValues": null,
-          "possibleTypes": null
-        },
-        {
-          "kind": "OBJECT",
-          "name": "Viewer",
-          "description": "Query any Pokémon by number or name",
-          "fields": [
+            },
             {
               "name": "pokemons",
               "description": null,
