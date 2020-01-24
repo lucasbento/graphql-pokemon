@@ -14,7 +14,7 @@ Simply get Pokémon's information through queries in GraphQL, example:
 
 ```graphql
 query {
-  pokemon(name: "pikachu") {
+  pokemon(name: "Pikachu") {
     id
     number
     name
