@@ -12,8 +12,8 @@
 
 Simply get Pokémon's information through queries in GraphQL, example:
 
-```javascript
-{
+```graphql
+query {
   pokemon(name: "Pikachu") {
     id
     number
@@ -69,3 +69,7 @@ yarn run watch # Using nodemon for auto-reloading
 ## Disclaimer
 
 This was built as part of a talk on Relay & GraphQL at [@ReactSP](https://meetup.com/pt-BR/ReactJS-SP) meetup, check us out, we build cool stuff. ;)
+
+## Related Projects
+
+* [Pokemon Gopher](https://github.com/racerxdl/pokemon-gopher) - Fetch information about pokémons with #graphql and #go 🙂
