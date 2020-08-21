@@ -76,4 +76,4 @@ This was built as part of a talk on Relay & GraphQL at [@ReactSP](https://meetup
 
 ## Related Projects
 
-- [Pokemon Gopher](https://github.com/racerxdl/pokemon-gopher) - Fetch information about pokémons with #graphql and #go 🙂
+* [Pokemon Gopher](https://github.com/racerxdl/pokemon-gopher) - Fetch information about pokémons with #graphql and #go 🙂
