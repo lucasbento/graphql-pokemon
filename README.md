@@ -55,7 +55,7 @@ query {
 
 ```sh
 yarn
-yarn run build
+yarn run build-app
 yarn start
 ```
 
@@ -64,6 +64,10 @@ yarn start
 ```sh
 yarn
 yarn run watch # Using nodemon for auto-reloading
+
+or
+
+vercel dev # npm i -g @now/cli
 ```
 
 ## Disclaimer
